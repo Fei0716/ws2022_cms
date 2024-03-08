@@ -1,0 +1,41 @@
+.banners-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.banner-container > a{
+    position: relative;
+    width: 250px;
+    min-height: 100px;
+    display: block;
+}
+.banner-container  a >img{
+    width: 250px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+.banner-container  .banner-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.7);
+    transition: all 0.2s ease;
+    transform: translateX(-20%);
+    visibility: hidden;
+    opacity: 0;
+    border-radius: 2rem;
+
+}
+.banner-container  a:hover > .banner-overlay{
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+
+}

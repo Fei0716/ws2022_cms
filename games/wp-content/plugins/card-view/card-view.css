@@ -1,0 +1,57 @@
+.card-view-container {
+  display: flex;
+  justify-content: center;
+  color: white;
+  width: 100%;
+}
+.card-view {
+  position: relative;
+
+  display: block;
+  height: 250px;
+  min-width: 200px !important;
+  border-radius: 10%;
+  overflow: hidden;
+  background-image: repeating-linear-gradient(
+    75deg,
+    #1b1b1b,
+    rgb(40 40 40) 17%
+  );
+  padding: 20px;
+  box-shadow: -6px 2px 55px 22px rgba(0, 0, 0, 0.8);
+  transition: all 0.2s ease;
+}
+.card-view-head > span {
+  color: rgb(161, 161, 161);
+}
+.card-view-body {
+  font-weight: bold;
+  font-family: "Arial";
+  font-size: 18px;
+}
+.card-view:nth-child(1) {
+  z-index: 1;
+  left: 25%;
+}
+.card-view:nth-child(2) {
+  z-index: 2;
+  left: 15%;
+}
+.card-view:nth-child(3) {
+  z-index: 3;
+  left: 5%;
+}
+.card-view:nth-child(4) {
+  z-index: 4;
+  left: -5%;
+}
+.card-view:nth-child(5) {
+  z-index: 5;
+  left: -20%;
+}
+.card-view:hover {
+  transform: rotate(5deg) translateX(-40px) translateY(-10%);
+}
+.card-view:hover ~ .card-view {
+  transform: translateX(50px);
+}
